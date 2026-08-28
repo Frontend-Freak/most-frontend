@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Golos_Text } from "next/font/google";
 import "../styles/globals.scss";
+import Header from "@/components/Header/Header";
 
 const golosText = Golos_Text({
     variable: "--font-golos",
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html lang="ru" className={golosText.variable}>
-            <body>{children}</body>
+            <body>
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }
