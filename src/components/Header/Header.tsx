@@ -26,7 +26,7 @@ export default function Header() {
                                 fill="#F2EAE0"
                             />
                         </svg>
-                        Мост
+                        <span>Мост</span>
                     </Link>
                     <ul className={styles.nav}>
                         <Link href={"services"} className={styles.item}>

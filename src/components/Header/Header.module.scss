@@ -13,10 +13,14 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 20px;
+
     svg {
         width: 50px;
         height: auto;
+    }
+
+    span {
+        font-size: 20px;
     }
 }
 
