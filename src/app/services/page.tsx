@@ -1,6 +1,7 @@
 import { URL } from "@/constants";
 import { Service } from "@/types/service";
 import styles from "./page.module.scss";
+import Link from "next/link";
 
 export default async function Services() {
     const res = await fetch(`${URL}/services`);
@@ -11,13 +12,17 @@ export default async function Services() {
             <div className={styles.services}>
                 <div className={styles.servicesContent}>
                     {services.map((item) => (
-                        <div key={item.id} className={styles.item}>
+                        <Link
+                            href={`/services/${item.id}`}
+                            key={item.id}
+                            className={styles.item}
+                        >
                             <div className={styles.itemLogo}></div>
                             <p className={styles.itemName}>{item.name}</p>
                             <p className={styles.itemDescription}>
                                 {item.description}
                             </p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

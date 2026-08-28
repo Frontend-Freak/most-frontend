@@ -29,7 +29,7 @@ export default function Header() {
                         <span>Мост</span>
                     </Link>
                     <ul className={styles.nav}>
-                        <Link href={"services"} className={styles.item}>
+                        <Link href={"/services"} className={styles.item}>
                             Каталог
                         </Link>
                         <Link href={"/"} className={styles.item}>
